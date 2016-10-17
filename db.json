@@ -1,0 +1,29 @@
+{
+  "persons": [
+    {
+      "name": "Adam",
+      "id": 1
+    },
+    {
+      "name": "Brandon",
+      "id": 2
+    },
+    {
+      "name": "BillyBob",
+      "id": 3
+    }
+  ],
+  "todos": [
+    {
+      "todo": "make sandwhich",
+      "personId": 2,
+      "id": 1
+    },
+    {
+      "completed": false,
+      "text": "Test",
+      "personId": 1,
+      "id": 2
+    }
+  ]
+}
