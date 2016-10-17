@@ -11,19 +11,38 @@
     {
       "name": "BillyBob",
       "id": 3
+    },
+    {
+      "name": "asdf",
+      "id": 4
+    },
+    {
+      "name": "safd",
+      "id": 5
+    },
+    {
+      "name": "JOE",
+      "id": 6
     }
   ],
   "todos": [
     {
-      "todo": "make sandwhich",
-      "personId": 2,
-      "id": 1
+      "completed": false,
+      "text": "test",
+      "personId": 3,
+      "id": 2
     },
     {
       "completed": false,
-      "text": "Test",
-      "personId": 1,
-      "id": 2
+      "text": "Make Sandwhich",
+      "personId": 2,
+      "id": 3
+    },
+    {
+      "completed": false,
+      "text": "TEST",
+      "personId": 5,
+      "id": 4
     }
   ]
 }

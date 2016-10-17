@@ -10,12 +10,20 @@
       <h1>My ToDo List</h1>
     </header>
     <main>
-      <ul ng-init="todos = [{text: 'Make a todo list', completed: true}, {text: 'Make it fancy', completed: false}]">
-        <li ng-repeat="todo in todos">
-          <input type="checkbox" ng-model="todo.completed"> <span ng-class="{ completed: todo.completed }">{{todo.text}}</span>
-        </li>
-        <li><input type="text" ng-model="todoToAdd"><a href="">add</a></li>
-      </ul>
+      <div ng-controller="PeopleCtrl as peopleCtrl">
+        <div ng-repeat="person in peopleCtrl.people">
+          <h2>{{person.name}}</h2>
+          <ul ng-controller="TodoListCtrl as todoCtrl">
+            <li ng-repeat="todo in person.todos">
+              <input type="checkbox" ng-model="todo.completed"> <span ng-class="{ completed: todo.completed }">{{todo.text}}</span>
+            </li>
+            <li><input type="text" ng-model="todoCtrl.todoToAdd"><a href="" ng-click="todoCtrl.addTodo(person)">add</a></li>
+          </ul>
+        </div>
+        <div>
+          <input type="text" ng-model="peopleCtrl.nameToAdd"><a href="" ng-click="peopleCtrl.addPerson()">add person</a>
+        </div>
+      </div>
     </main>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
     <script src="app.js"></script>

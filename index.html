@@ -14,7 +14,7 @@
         <div ng-repeat="person in peopleCtrl.people track by $index">
           <h2>{{person.name}}</h2>
           <ul ng-controller="TodoListCtrl as todoCtrl">
-            <li ng-repeat="todo in todoCtrl.todos">
+            <li ng-repeat="todo in person.todos">
               <input type="checkbox" ng-model="todo.completed"> <span ng-class="{ completed: todo.completed }">{{todo.text}}</span>
             </li>
             <li><input type="text" ng-model="todoCtrl.todoToAdd"><a href="" ng-click="todoCtrl.addTodo(person)">add</a></li>
