@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html ng-app="todoApp">
+  <head>
+    <meta charset="utf-8">
+    <title>My ToDo List</title>
+    <link rel="stylesheet" href="style.css" charset="utf-8">
+  </head>
+  <body>
+    <header>
+      <h1>My ToDo List</h1>
+    </header>
+    <main>
+      <ul ng-init="todos = [{text: 'Make a todo list', completed: true}, {text: 'Make it fancy', completed: false}]">
+        <li ng-repeat="todo in todos">
+          <input type="checkbox" ng-model="todo.completed"> <span ng-class="{ completed: todo.completed }">{{todo.text}}</span>
+        </li>
+        <li><input type="text" ng-model="todoToAdd"><a href="">add</a></li>
+      </ul>
+    </main>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+    <script src="app.js"></script>
+    <script src="controllers.js"></script>
+  </body>
+</html>
